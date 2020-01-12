@@ -288,6 +288,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+    // in case , that user scan qr code , add parcel from qr results
     protected void addParcelFromQr(String string){
 
         String[] arrOfStr = string.split(",", 4);
@@ -345,13 +346,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         onClick(null);
     }
 
+
+    // get results from qr activity scan
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        // in try  ,because if no t, in the case user push on "back" button , its throw Exception
         try{
             super.onActivityResult(requestCode, resultCode, data);
             String editTextValue = data.getStringExtra("Qr");
-            //Toast.makeText(getApplicationContext(), editTextValue, Toast.LENGTH_SHORT).show();
             addParcelFromQr(editTextValue);
         }catch (Exception e){
 
