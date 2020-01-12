@@ -291,13 +291,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         try{
-
             super.onActivityResult(requestCode, resultCode, data);
-            //Retrieve data in the intent
-
             String editTextValue = data.getStringExtra("Qr");
-            // Button button = (Button)findViewById(R.id.button);
-            //  button.setText(editTextValue);
             Toast.makeText(getApplicationContext(), editTextValue, Toast.LENGTH_SHORT).show();
 
         }catch (Exception e){

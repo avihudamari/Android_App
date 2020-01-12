@@ -290,8 +290,8 @@ public class QrCodeActivity extends Activity implements Callback, OnClickListene
             String value;
             value = resultString;
             Intent intent = new Intent();
-            intent.putExtra("Qr", value); //value should be your string from the edittext
-            setResult(1, intent); //The data you want to send back
+            intent.putExtra("Qr", value);
+            setResult(1, intent);
             finish();
         }
     }
