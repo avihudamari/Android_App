@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="left"
+    android:weightSum="1"
+    >
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_weight="9"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:padding="40dp"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_of_the_pack"
+                    android:gravity="center_vertical"     />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Spinner
+                android:id="@+id/type_spinner"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+            <TextView
+                android:layout_marginTop="30dp"
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/breakable" />
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:id="@+id/breakable_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:text="@string/Package_weight"
+                android:layout_height="wrap_content"/>
+            <Spinner
+                android:layout_marginTop="5dp"
+                android:id="@+id/package_weight_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:focusedByDefault="true"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/textViewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Location_of_the_pack"
+                    android:gravity="center_vertical"     />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/locationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:text="Location:"
+                android:layout_marginTop="5dp"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:minLines="3"
+
+                />
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone number"
+                android:id="@+id/TextInputLayoutPhoneNumber"
+                tools:ignore="InvalidId"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                app:helperTextEnabled="true"
+                app:errorEnabled="true"
+                android:focusedByDefault="false"
+                android:focusable="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TextInputEditTextPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:focusedByDefault="false"
+                    android:focusable="true"
+                    android:drawableStart="@drawable/ic_phone_black_24dp"
+                    android:drawablePadding="12dp"
+                    android:inputType="phone"
+                    android:drawableEnd="@drawable/ic_search_black_24dp"
+                    android:drawableLeft="@drawable/ic_phone_black_24dp"
+                    android:drawableRight="@drawable/ic_search_black_24dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:id="@+id/sendButton"
+                    android:onClick="onClick"
+                 />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">DDB</string>
+
+    <string name="spinner_size_pack">Size of pack</string>
+    <string-array name="type_list">
+        <item>Envelope</item>
+        <item>Small pack</item>
+        <item>Big pack</item>
+    </string-array>
+    <string-array name="breakable_list">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="Package_weight_list">
+        <item>Up to 500 gr</item>
+        <item>Up to 1 kg</item>
+        <item>Up to 5 kg</item>
+        <item>Up to 20 kg</item>
+    </string-array>
+    <string name="Package_weight">Package weight</string>
+    <string name="type_of_the_pack">Type of the pack</string>
+    <string name="Location_of_the_pack">Parcel location</string>
+    <string name="breakable">Breakable?</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+
+
+
+
+      <string name="title_activity_scan_qr_code">Scan</string>
+    <string name="qc_code_close">Close</string>
+    <string name="qr_code_select_picture"></string>
+    <string name="qr_code_open_flash_light">Light on</string>
+    <string name="qr_code_close_flash_light">Light off</string>
+    <string name="qr_code_auto_scan_notification">Scan notification</string>
+    <string name="qr_code_notification">Notification</string>
+    <string name="qr_code_camera_not_open">Camera not open</string>
+    <string name="qr_code_positive_button_know">g</string>
+    <string name="qr_code_positive_button_confirm">g</string>
+    <string name="qr_code_could_not_read_qr_code_from_picture">Error</string>
+    <string name="qr_code_could_not_read_qr_code_from_scanner">Error</string>
+    <string name="qr_code_camera_not_found">Camera not found</string>
+</resources>
