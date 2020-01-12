@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -287,14 +288,71 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+    protected void addParcelFromQr(String string){
+
+        String[] arrOfStr = string.split(",", 4);
+        if (arrOfStr.length != 4){
+            Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        int index1 = 0;
+        int index2 =0;
+        int index3 = 0;
+        switch (arrOfStr[0]){
+
+            case "0":index1 = 0;
+            break;
+            case "1":index1 =1;
+            break;
+            case  "2":index1 =2;
+            break;
+            default: Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+
+        switch (arrOfStr[1]){
+            case "0":index2 =0;
+            break;
+            case "1":index2 =1;
+            break;
+           default:
+               Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+               return;
+        }
+        switch (arrOfStr[2]){
+            case "0":index3 =0;
+                break;
+            case "1":index3 =1;
+                break;
+            case "2":index3 =2;
+            break;
+            case "3":index3 = 3;
+            default:
+                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                return;
+        }
+        if(arrOfStr[3].length() != 10){
+             Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        spinnerType.setSelection(index1);
+        spinnerBreakable.setSelection(index2);
+        spinnerPackageWeight.setSelection(index3);
+        TextInputEditTextPhoneNumber.setText(arrOfStr[3]);
+        onClick(null);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         try{
             super.onActivityResult(requestCode, resultCode, data);
             String editTextValue = data.getStringExtra("Qr");
-            Toast.makeText(getApplicationContext(), editTextValue, Toast.LENGTH_SHORT).show();
-
+            //Toast.makeText(getApplicationContext(), editTextValue, Toast.LENGTH_SHORT).show();
+            addParcelFromQr(editTextValue);
         }catch (Exception e){
 
         }
